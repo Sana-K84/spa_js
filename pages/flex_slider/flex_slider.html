@@ -1,0 +1,60 @@
+<h1>My favorite sports are</h1>
+<div class="gallery">
+    <script>console.log('dfd')</script>
+    <div class="container">
+        <div class="slide"
+            style="background-image: url('https://images.unsplash.com/flagged/photo-1580051579393-2e94dd6f4789?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80');">
+            <h3>Basketball</h3>
+        </div>
+        <div class="slide" style="
+      background-image: url('https://images.unsplash.com/photo-1622979857654-9363bb0a1243?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=374&q=80');
+    ">
+            <h3>Swimming</h3>
+        </div>
+        <div class="slide" style="
+      background-image: url('https://images.unsplash.com/photo-1486215397028-cb4f31efea3e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=871&q=80');
+    ">
+            <h3>Kickboxing</h3>
+        </div>
+        <div class="slide" style="
+      background-image: url('https://images.unsplash.com/photo-1610554843876-9be9b896b2d2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80');
+    ">
+            <h3>Bodybuilding</h3>
+        </div>
+        <div class="slide" style="
+      background-image: url('https://images.unsplash.com/photo-1609861517208-e5b7b4cd4b87?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=435&q=80');
+    ">
+            <h3>Tourism</h3>
+        </div>
+    </div>
+    <script type="javascript">
+
+        function slidesPlugin(activeSlide = 0) {
+            console.log(this)
+            const slides = document.querySelectorAll('.slide');
+
+            slides[activeSlide].classList.add('active');
+
+            for (const slide of slides) {
+                slide.addEventListener('click', changeClass);
+            }
+
+            function changeClass() {
+                if (this.classList.contains('active')) {
+                    this.classList.remove('active');
+                } else {
+                    clearActiveClasses()
+                    this.classList.add('active');
+                }
+            }
+
+            function clearActiveClasses() {
+                slides.forEach((slide) => {
+                    slide.classList.remove('active')
+                })
+            }
+        }
+
+        slidesPlugin(2)
+    </script>
+</div>

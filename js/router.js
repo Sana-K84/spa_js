@@ -9,7 +9,8 @@ const routes = {
     404: "/pages/404.html",
     "/": "/pages/index.html",
     "/about": "/pages/about.html",
-    "/lorem": "/pages/lorem.html",
+    "/lorem": "/pages/lorem/lorem.html",
+    "/flex_slider": "/pages/flex_slider/flex_slider.html"
 };
 
 const handleLocation = async () => {
